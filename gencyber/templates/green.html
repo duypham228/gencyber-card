@@ -5,12 +5,16 @@
 <ul>
     {% for obj in list %}
         <li>
-            <div class="card-holder">
-                <!-- {{ obj.color }}
-                <br> -->
-                <!-- {{ obj.content }}
-                <br> -->
-                <img src="{{MEDIA_URL}}{{obj.pic.url}}" width="450", height="630">
+            <div class="card-holder flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        {%load static%}
+                        <img src="{% static 'front-face/green.jpg'%}" width="450", height="630">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="{{MEDIA_URL}}{{obj.pic.url}}" width="450", height="630">
+                    </div> 
+                </div>
             </div>
         </li>
         <!-- <p>-----------------</p> -->
