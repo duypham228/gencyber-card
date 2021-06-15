@@ -1,0 +1,1 @@
+web: gunicorn gencyber.wsgi --log-file -
