@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Card Detail Page</h1>
+{% for obj in list %}
+    <div class="card-holder">
+        {{ obj.color }}
+        <br>
+        {{ obj.content }}
+        <br>
+        <img src="{{MEDIA_URL}}{{obj.pic.url}}" width="450", height="630">
+    </div>
+    <p>-----------------</p>
+{% endfor %}
+<a href="{% url 'home' %}">Home</a>
+{% endblock %}

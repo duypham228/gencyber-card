@@ -4,4 +4,4 @@ from django.db import models
 class Card(models.Model):
     color = models.TextField()
     content = models.TextField()
-
+    pic = models.ImageField(null=True)

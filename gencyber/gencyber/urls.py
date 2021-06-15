@@ -16,11 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from pages.views import home_view, blue_view, darkblue_view
+from cards.views import card_detail_view
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_view, name='home'),
     path('home', home_view, name='home'),
+    path('', home_view, name='home'),
+    path('card/', card_detail_view, name='card_detail'),
     path('blue', blue_view, name='blue'),
     path('darkblue', darkblue_view, name='darkblue'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
