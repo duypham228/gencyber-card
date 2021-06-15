@@ -1,6 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Card Home Page</h1>
-<a href="{% url 'blue' %}">Blue</a>
-<a href="{% url 'darkblue' %}">Dark Blue</a>
+{%load static%}
+<div class="three-per-row">
+    <ul>
+        <li>
+            <a href="{% url 'blue' %}">
+                <img src="{% static 'front-face/blue.jpg'%}" width="450", height="630">
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'darkblue' %}">
+                <img src="{% static 'front-face/darkblue.jpg'%}" width="450", height="630">
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'red' %}">
+                <img src="{% static 'front-face/red.jpg'%}" width="450", height="630">
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'darkred' %}">
+                <img src="{% static 'front-face/darkred.jpg'%}" width="450", height="630">
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'green' %}">
+                <img src="{% static 'front-face/green.jpg'%}" width="450", height="630">
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'darkgreen' %}">
+                <img src="{% static 'front-face/darkgreen.jpg'%}" width="450", height="630">
+            </a>
+        </li>
+    </ul>
+</div>
 {% endblock %}

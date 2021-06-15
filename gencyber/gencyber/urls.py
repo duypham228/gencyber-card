@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pages.views import home_view, blue_view, darkblue_view
+from pages.views import *
 from cards.views import card_detail_view
 from django.conf.urls.static import static
 from django.conf import settings
@@ -27,6 +27,10 @@ urlpatterns = [
     path('card/', card_detail_view, name='card_detail'),
     path('blue', blue_view, name='blue'),
     path('darkblue', darkblue_view, name='darkblue'),
+    path('red', red_view, name='red'),
+    path('darkred', darkred_view, name='darkred'),
+    path('green', green_view, name='green'),
+    path('darkgreen', darkgreen_view, name='darkgreen'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

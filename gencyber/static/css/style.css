@@ -2,9 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
-  }
+}
   
-  .three-per-row ul li {
+.three-per-row ul li {
     list-style: none;
     flex: 0 0 33.333333%;
-  }
+}

@@ -1,15 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Card Detail Page</h1>
-{% for obj in list %}
-    <div class="card-holder">
-        {{ obj.color }}
-        <br>
-        {{ obj.content }}
-        <br>
-        <img src="{{MEDIA_URL}}{{obj.pic.url}}" width="450", height="630">
-    </div>
-    <p>-----------------</p>
-{% endfor %}
+<h1>Blue Card Detail Page</h1>
+<div class="three-per-row">
+<ul>
+    {% for obj in list %}
+        <li>
+            <div class="card-holder">
+                <!-- {{ obj.color }}
+                <br> -->
+                <!-- {{ obj.content }}
+                <br> -->
+                <img src="{{MEDIA_URL}}{{obj.pic.url}}" width="450", height="630">
+            </div>
+        </li>
+        <!-- <p>-----------------</p> -->
+    {% endfor %}
+</ul>
+</div>
 <a href="{% url 'home' %}">Home</a>
 {% endblock %}
