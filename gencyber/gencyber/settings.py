@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-m=#vt5dm=t#ei8kh+-*ck5!&x5jjky=supev(0z!)^6u(4rs5!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tamu-gencyber.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['tamu-gencyber.herokuapp.com', '127.0.0.1', 'gencyberlive.herokuapp.com']
 
 
 # Application definition
